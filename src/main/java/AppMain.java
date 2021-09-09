@@ -2,7 +2,7 @@ public class AppMain {
 
     public static void main(String[] args) {
 
-            int number = 3;
+            int number = 5;
 
 
         System.out.println(calculateFac(number));
@@ -12,13 +12,18 @@ public class AppMain {
     public static int calculateFac(int value){
 
         int fac = 1;
+        int i = 1;
         if (value == 0) {
             return fac;
         }
 
-        for(int i = 1; i <= value; i++){
+
+        while( i < value+1){
+
             fac = fac * i;
+            i++;
         }
+
         return fac;
 
     }
