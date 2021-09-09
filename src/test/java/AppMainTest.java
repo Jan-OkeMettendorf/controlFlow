@@ -6,8 +6,24 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class AppMainTest {
 
+   @Test
+   void testFillArray(){
+
+      //GIVEN
+
+         String[] expected = {"Student 1","Student 2", "Student 3"};
+
+      //WHEN
+
+         String[] actual = AppMain.fillArray(expected.length);
+
+      //THEN
+
+         Assertions.assertArrayEquals(expected, actual);
 
    }
 
-
 }
+
+
+
