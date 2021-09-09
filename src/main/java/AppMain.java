@@ -13,14 +13,14 @@ public class AppMain {
 
         int fac = 1;
         int i = 1;
+
         if (value == 0) {
             return fac;
         }
 
 
-        while( i < value+1){
-
-            fac = fac * i;
+        while( i <= value){
+            fac *= i;
             i++;
         }
 
