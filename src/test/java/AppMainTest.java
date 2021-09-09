@@ -42,7 +42,7 @@ public class AppMainTest {
 
         //GIVE
 
-        int a = 30;
+        int a = 29;
 
         //WHEN
 
