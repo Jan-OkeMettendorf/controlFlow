@@ -2,31 +2,67 @@ public class AppMain {
 
     public static void main(String[] args) {
 
-        int number = 30;
+        int number = 60;
+        String Alarm = "green";
 
-        checkCountGreaterThan30(number);
+        System.out.println(checkAlarmSignalAndCapacity(number, Alarm));
 
     }
 
-    public static boolean checkCountGreaterThan30(int value){
 
-        if (value > 30) {
+    public static String checkAlarmSignalAndCapacity(int capacity, String alarmSignal){
 
-            System.out.println("maximum number reached");
-            return true;
+        switch (alarmSignal){
 
-        } else if (value == 30) {
+            case "red":
 
-            System.out.println("maximum number reached");
-            return true;
+                if (capacity > 0) {
+                    return "maximum number reached.";
+                }
+                    return "maximum number not reached.";
+
+            case "yellow":
+
+                return checkCapacityToAlarmsignal(30, capacity);
+
+            case "green":
+
+                    return checkCapacityToAlarmsignal(60, capacity);
+
+            default:
+
+                    return "unknown Alarm.";
+
+        }
+
+
+    }
+    public static String checkCountGreaterThan30(int capacity){
+
+        if (capacity > 30) {
+
+            return "maximum number reached.";
+
+        } else if (capacity == 30) {
+
+            return "maximum number reached.";
 
         } else {
 
-            System.out.println("maximum number not reached");
-            return false;
+            return "maximum number not reached.";
         }
 
     }
 
-}
+    public static String checkCapacityToAlarmsignal(int allowedCapacity, int actualCapacity){
 
+        if (actualCapacity > allowedCapacity) {
+
+            return "maximum number reached.";
+
+        }
+
+        return "maximum number not reached.";
+    }
+
+}
